@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 40px 40px;
+    margin: 40px 0;
 
     /* Estilização de cada botão */
     button {
@@ -71,7 +71,6 @@ body {
 /* Estilização do espaço onde está a lista */
 .listContainer {
     background-color: rgba(255, 255, 255, 0.75);
-    margin: 50px;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -143,7 +142,7 @@ body {
 /* Estilização do espaço do conteúdo de dentro do modal quando o mesmo está visível */
 .modal-content {
     background-color: rgba(0, 0, 0, 0.7);
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
     width: 100%;
     max-width: 500px;
