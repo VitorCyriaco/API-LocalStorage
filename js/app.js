@@ -10,7 +10,8 @@ closeBtn.onclick = () => {
     modal.style.display = "none";
 
     // Limpar valores dos inputs
-    const inputs = closeBtn.querySelectorAll("input[type='text'], input[type='date']");
+    const inputs = modal.querySelectorAll("input[type='text'], input[type='date']");
+    console.log(inputs)
     inputs.forEach(input => {
         input.value = "";
     })
