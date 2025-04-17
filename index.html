@@ -21,9 +21,13 @@
         <section class="buttonContainer">
             <div class="buttons">
                 <button id="buttonAdd">Adicionar Tarefa</button>
-                <button>Todas</button>
-                <button>A Fazer</button>
-                <button>Finalizada</button>
+
+                <!--Botões de filtragem-->
+                <div>
+                    <button class="buttonFilter selected">Todas</button>
+                    <button class="buttonFilter">A Fazer</button>
+                    <button class="buttonFilter">Finalizada</button>
+                </div>
             </div>
         </section>
 
@@ -36,6 +40,7 @@
                 <p>Descrição</p>
                 <p>Quando</p>
                 <p>Prioridade</p>
+                <p>Status</p>
                 <p>Ações</p>
             </div>
 
@@ -46,37 +51,53 @@
                     <span class="taskDescription">Criar um layout</span>
                     <span class="taskWhen">20/05/2025</span>
                     <span class="taskPriority">Alta</span>
+                    <span class="taskPriority">A Fazer</span>
                     <span class="taskActions">
-                        <button class="deleteBtn"><img src="assets/img/trashIcon.png" alt=""></button>
+                        <button class="deleteBtn"><img src="assets/img/trashIcon.png" alt="Remover"></button>
+                        <button class="doneBtn"><img src="assets/img/doneIcon.png" alt="Finalizar"></button>
                     </span>
                 </li>
             </ul>
-            </div>
         </section>
     </div>
 
     <!--Modal (tela sobreposta) para adicionar as informações da tarefa a ser adicionada na lista-->
     <div id="addTaskModal" class="modal">
         <div class="modal-content">
+
             <!--Botação "X" para fechar o modal-->
             <span class="closeBtn">&times;</span>
+
             <!--Título do modal-->
             <h2>Adicionar Nova Tarefa</h2>
+
             <!--Form com os inputs para inserir os dados da tarefa-->
             <form id="taskForm">
-                <input type="text" id="taskTitle" placeholder="Título da tarefa" />
-                <input id="taskDescription" placeholder="Descrição da tarefa" />
-                <input id="taskWhen" placeholder="Quando" />
-                <input id="taskPriority" placeholder="Prioridade" />
+                <label for="taskTitle">Tarefa:</label>
+                <input id="taskTitle" type="text" placeholder="Título da tarefa" />
+                <label for="taskDescription">Descrição:</label>
+                <input id="taskDescription" type="text" placeholder="Descrição da tarefa" />
+                <label for="taskWhen">Quando:</label>
+                <input id="taskWhen" type="text" placeholder="DD/MM/AAAA" />
+
+                <!--Select com opções pré definidas-->
+                <label for="taskPriority">Prioridade:</label>
+                <select id="taskPriority" type="text">
+                    <option value="" disabled selected>Selecione a prioridade</option>
+                    <option value="alta">Alta</option>
+                    <option value="media">Média</option>
+                    <option value="baixa">Baixa</option>
+                </select>
 
                 <!--Botão para salvar os dados e exibir na lista-->
                 <button type="submit">Salvar</button>
-          </form>
+            </form>
         </div>
     </div>
 
     <!--Importação dos scripts (JavaScript)-->
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/app.js"></script>
-    </body>
-    
+</body>
+
 </html>
